@@ -2,8 +2,8 @@ require 'pry'
 
 class Grandma
   def initialize
-    #   @ready_to_quit = false
-    #  @input = gets
+     @ready_to_quit = false
+     @input = gets
   end
 
   def talk
@@ -11,14 +11,28 @@ class Grandma
 
     until @ready_to_quit
 
+      if downcase_checking? 
+        puts "SPEAK UP KID !"
+      elsif !downcase_checking? && !@input.nil? && @input != "GOODBYE!"
+        puts "NO, NOT SINCE 1946!"
+      elsif input == "GOODBYE!" && count == 
+
+          
+          
+
+
     end
 
     puts "LATER SKATER !"
   end
 
-  def downcase_checking(input)
-    sentence = input.split
-    sentence.include?("/[a-z]/")
+
+
+
+  #détermine si il y a une minuscule
+  def downcase_checking?
+    sentence = @input.split('')
+    sentence.any? {|val| /[a-z]/ =~ val}
   end
 end
 
