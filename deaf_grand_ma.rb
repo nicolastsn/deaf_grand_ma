@@ -1,13 +1,27 @@
-ready_to_quit = false
+require 'pry'
 
-puts "HEY KIDS!"
-input = gets
+class Grandma
+  def initialize
+    #   @ready_to_quit = false
+    #  @input = gets
+  end
 
+  def talk
+    puts "HEY KIDS!"
 
-puts "LATER SKATER !"
+    until @ready_to_quit
 
+    end
 
-def downcase_checking
-	sentence = input.split
-	sentence.include?(/[a-z]/)
+    puts "LATER SKATER !"
+  end
+
+  def downcase_checking(input)
+    sentence = input.split
+    sentence.include?("/[a-z]/")
+  end
 end
+
+binding.pry
+
+puts "end of code"
